@@ -3,6 +3,11 @@ import React from 'react';
 import { Button, Container, Flex, Heading, Text } from '@chakra-ui/react';
 
 const Home = () => {
+
+    const submitReloadProfileWeb = () => {
+        console.log( 'click' );
+    }
+
     return (
         <Flex h={'100%'} w={'100%'} >
             <Container maxWidth={'70%'} >
@@ -12,7 +17,7 @@ const Home = () => {
                 <Heading fontSize="xl" mb={4} color="teal.800">
                     rubenruizpedreira.es
                 </Heading>
-                <Button colorScheme="teal">
+                <Button onClick={submitReloadProfileWeb} colorScheme="teal">
                     ACTUALIZAR WEB
                 </Button>
             </Container>
