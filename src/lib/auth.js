@@ -1,8 +1,12 @@
 export const loginAdmin = ( username, password ) => {
-    if ( username == 'admin' && password == 'test') return true;
-    return false;
-}
-
-export const isLogin = () => {
-    return true;
+    fetch("http://localhost:8080/api/auth/singin", {
+        "method": "POST",
+        "headers": {
+        "Content-Type": "application/json"
+    }, "body": JSON.stringify({username,password})
+    }).then(response => {
+        console.log(response);
+    }).catch(err => {
+      console.error(err);
+    });
 }
