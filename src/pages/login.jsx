@@ -11,7 +11,7 @@ const Login = ({setAuth}) => {
    const [password, setPassword] = useState('');
 
    const loginAdmin = ( username, password ) => {
-    fetch("http://localhost:8080/api/auth/singin", {
+    fetch("http://api.rubenruizpedreira.es/api/auth/singin", {
         "method": "POST",
         "headers": {
         "Content-Type": "application/json"
